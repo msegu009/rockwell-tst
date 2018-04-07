@@ -1,16 +1,15 @@
 <!-- carousel -->
 
-<div class="carousel">
-  <h3 class="white-text">Landing Page</h3>
-    <div class="carousel-item">
-      <div id="lp1"><a class="white-text" href="story_image_logo"><%=image_tag("landing_images/story_logo.jpg") %></a></div>
-    <%= image_tag ("landing_images/story_logo.jpg") %>
-  </div>  
+<div class="carousel carousel-slider">
+  <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
+  <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
+  <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
+  <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
 </div>
+
 
 <!-- button -->
 
 <div id="gstart">
 	<a class="btn waves-effect white grey-text darken-text-2" <%= link_to("Get Started", city_path) %></a>
 </div>
-
