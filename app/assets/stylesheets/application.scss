@@ -22,16 +22,18 @@
 body {
   background-color: rgba(#000000, 0.93);
 }
+
 .test {
   background-color: black;
   border: solid 1px white;
   height: 100px;
 }
+
 .line {
   border: 1px solid white;
 }
 
-#gstart {
-	margin-left: auto;
-  margin-right: auto;
+.gstart {
+	margin-left: center;
+  margin-right: center;
 }

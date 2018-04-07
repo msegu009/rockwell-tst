@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  get 'sessions/create'
 
-  get 'sessions/destroy'
+  # get 'sessions/create'
+
+
+  get 'reservation/index'
 
   root 'landing#index'
   get 'landing/index'
 
-
+  get "/city/miami" => "club#index"
   get "/city" => "city#city"
 
 
