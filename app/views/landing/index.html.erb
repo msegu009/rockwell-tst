@@ -1,15 +1,14 @@
-<h1>Landing#index</h1>
+<!-- carousel -->
 
-<%#=  @club_images.each do |photo|%>
-	<%#= image_tag(photo) %>
-<!-- <% end %> -->
-
-
-<div class="carousel carousel-sli">
-   <h3 class="white-text">Featured Playlists: US</h3>
-   <%=  @club_images.each do |photo|%>
+<div class="carousel">
+  <h3 class="white-text">Landing Page</h3>
     <div class="carousel-item">
-      <div><%= image_tag(photo) %></div>
-    </div>
-   <% end %>
-  </div>
+      <div id="lp1"><a class="white-text" href="story_image_logo"><%=image_tag("landing_images/story_logo.jpg") %></a></div>
+    <%= image_tag ("landing_images/story_logo.jpg") %>
+  </div>  
+</div>
+
+<!-- button -->
+<div id="gstart">
+	<a class="btn waves-effect white grey-text darken-text-2">button</a>
+</div>
