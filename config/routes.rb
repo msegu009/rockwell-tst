@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'reservation/index'
+
   root 'landing#index'
   get 'landing/index'
 
