@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'club/index'
+  get 'reservation/index'
 
   root 'landing#index'
   get 'landing/index'
