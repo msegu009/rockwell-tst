@@ -12,6 +12,6 @@
 //
 //= require rails-ujs
 //= require materialize
+//= require jquery
 //= require turbolinks
 //= require_tree .
-
