@@ -1,6 +1,12 @@
 <h1>Landing#index</h1>
-<p>Find me in app/views/landing/index.html.erb</p>
 
-<%=  @club_images.each do |photo|%>
-	<%= image_tag(photo ) %>
-<% end %>
+
+
+<div class="carousel carousel-slider">
+   <h3 class="white-text">Featured Playlists: US</h3>
+   <%=  @club_images.each do |photo|%>
+    <div class="carousel-item">
+      <div><%= image_tag(photo) %></div>
+    </div>
+   <% end %>
+  </div>
