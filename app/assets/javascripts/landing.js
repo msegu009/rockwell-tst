@@ -2,6 +2,5 @@
 // All this logic will automatically be available in application.js.
 
 
-var instance = M.Carousel.init({
-    fullWidth: true
-  });
+  var elem = document.querySelector('.slider');
+  var instance = M.Slider.init(elem, options);
