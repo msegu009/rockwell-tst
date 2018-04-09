@@ -1,0 +1,269 @@
+
+
+
+<div class="top_section">
+
+  <!-- first section -->
+  <div class="booking_info">
+    This is where the booking info will go
+  </div>
+  <!-- end first section -->
+
+  <!-- second section -->
+  <div class="club_floorplan">
+
+    <div class="main_bar">
+      Main Bar
+    </div>
+
+    <div class="tdf_middle_side">
+        <!-- <div class="tdf_middle_side"> -->
+
+        <div class="tables_and_dancefloor">
+
+          <div class="tdf_left_side">
+            <% @tables.where(id: [1,2,3,4,5,6,7,8]).each do |table| %>
+                <div class="tdf_columnA_tables">
+                      <% if table.id == 1 %>
+                      <div class="table_1 box">
+                        <%=table.name%>
+                        <br />
+                        <br />
+                        <%= "$" + table.min_price%>
+                      </div>
+                      <% end %>
+
+                      <% if table.id == 3 %>
+                      <div class="table_3 box">
+                        <%=table.name%>
+                        <br />
+                        <br />
+                        <%= "$" + table.min_price%>
+                      </div>
+                      <% end %>
+
+                      <% if table.id == 5 %>
+                      <div class= "table_5 box">
+                       <%=table.name%>
+                        <br />
+                        <br />
+                          <%= "$" + table.min_price%>
+                      </div>
+                      <% end %>
+
+                      <% if table.id == 7 %>
+                      <div class="table_7 box">
+                        <%=table.name%>
+                        <br />
+                        <br />
+                        <%= "$" + table.min_price%>
+                      </div>
+                      <% end %>
+                  </div>
+
+                  <div class="tdf_columnB_tables">
+
+                      <% if table.id == 2 %>
+                      <div class= "table_2 box">
+                        <%=table.name%>
+                        <br />
+                        <br />
+                        <%= "$" + table.min_price%>
+                      </div>
+                      <% end %>
+
+                      <% if table.id == 4 %>
+                      <div class= "table_4 box">
+                        <%=table.name%>
+                        <br />
+                        <br />
+                        <%= "$" + table.min_price%>
+                      </div>
+                      <% end %>
+
+                      <% if table.id == 6 %>
+                      <div class= "table_6 box">
+                        <%=table.name%>
+                        <br />
+                        <br />
+                        <%= "$" + table.min_price%>
+                      </div>
+                      <% end %>
+
+                      <% if table.id == 8 %>
+                      <div class= "table_8 box">
+                        <%=table.name%>
+                        <br />
+                        <br />
+                        <%= "$" + table.min_price%>
+                      </div>
+                      <% end %>
+                    </div>
+
+                <% end %>
+              </div>
+
+              <!-- this div closes tdf_left_side        -->
+            <div class="dance_floor_booking">
+              Dance floor
+            </div>
+            <!-- this div closes dance_floor_booking -->
+
+
+          <div class="tdf_right_side">
+            <% @tables.where(id: [9,10,11,12,13,14,15,16]).each do |table| %>
+
+              <div class="tdf_columnC_tables">
+
+                <% if table.id == 9 %>
+                <div class="table_9 box">
+                 <%=table.name%>
+                  <br />
+                  <br />
+                  <%= "$" + table.min_price%>
+                </div>
+                <% end %>
+
+                <% if table.id == 11 %>
+                <div class="table_11 box">
+                  <%=table.name%>
+                  <br />
+                  <br />
+                  <%= "$" + table.min_price%>
+                </div>
+                <% end %>
+
+                <% if table.id == 13 %>
+                <div class="table_13 box">
+                  <br />
+
+                  <%=table.name%>
+                  <br />
+                  <br />
+                </div>
+                <% end %>
+
+                <% if table.id == 15 %>
+                <div class="table_15 box">
+                  <%=table.name%>
+                  <br />
+                  <br />
+                  <%= "$" + table.min_price%>
+                </div>
+                <% end %>
+
+              </div>
+              <!-- this div closes tdf_columnC_tables -->
+              <div class="tdf_columnD_tables">
+
+                <% if table.id == 10 %>
+                <div class= "table_10 box">
+                  <%=table.name%>
+                  <br />
+                  <br />
+                  <%= "$" + table.min_price%>
+                </div>
+                <% end %>
+
+                <% if table.id == 12 %>
+                <div class= "table_12 box">
+                  <%=table.name%>
+                  <br />
+                  <br />
+                  <%= "$" + table.min_price%>
+                </div>
+                <% end %>
+
+                <% if table.id == 14 %>
+                <div class= "table_14 box">
+                  <%=table.name%>
+                  <br />
+                  <br />
+                  <%= "$" + table.min_price%>
+                </div>
+                <% end %>
+
+                <% if table.id == 16 %>
+                <div class= "table_16 box">
+                  <%=table.name%>
+                  <br />
+                  <br />
+                  <%= "$" + table.min_price%>
+                </div>
+                <% end %>
+              </div>
+              <% end %>
+              <!-- this div closes tdf_columnD_tables -->
+
+          </div>
+          <!-- this div closes tdf_right_side -->
+        </div>
+        <!-- this div cloes tables and dance_floor_booking -->
+      </div>
+      <!-- this div closes out tdf_middle_side -->
+
+      <div class= "vip_tables_andDJbooth_booking">
+        <% @tables.where(id: [17,18,19]).each do |table| %>
+
+          <% if table.id == 17 %>
+            <div class="tl_left_vip_booking">
+              <br />
+              Left VIP
+              <%=table.name%>
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+          <% end %>
+
+          <% if table.id == 18 %>
+            <div class="dj_booth_booking">
+              <br />
+              DJ Booth
+              <%=table.name%>
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+          <% end %>
+
+          <% if table.id == 19 %>
+            <div class="tl_right_vip_booking">
+              <br />
+              Right VIP
+              <%=table.name%>
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+          <% end %>
+        <% end %>
+
+      </div>
+
+
+
+
+      <!-- this div closes vip_tables_andDJbooth_booking -->
+
+    <!-- </div> -->
+  </div>
+
+  <div class="payment_section">
+    This is where the credit card info will go
+  </div>
+
+  <!-- this div closes out floorplan -->
+  <!-- end second section -->
+
+  <!-- third section -->
+<br></br>
+  <!-- end third section -->
+
+</div><!--end top section-->
+
+<div class="bottom_section">
+  This is where the paragraph with a lot of info is going to go.
+</div>
+
+<div class="slider_of_rockwell_photos">
+  In this area there is going to be some kind of sliding group of photos of club scenes from rockwell just 
+ to help decorate this page:
+</div>
