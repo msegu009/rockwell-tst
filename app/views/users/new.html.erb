@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign Up!</title>
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-5">
+			<h2>Sign Up!</h2>
+			<%= simple_form_for( @user, url: '/users', html: {class: 'form-vertical'}) do |f| %>
+			<%= f.error_notification %>
+			<%= f.input :firstname %>
+			<%= f.input :lastname %>
+			<%= f.input :email %>
+			<%= f.input :password_digest %>
+			<%= f.button :submit %>
+			<% end %>
+		</div>
+		<div class="col-xs-5 col-xs-offset-1">
+			<h2>Login!</h2>
+		<% if flash.key? ('login_errors') %>
+		<ul class="list-group">
+				<li class="list-group-item list-group-item-danger"><%= flash[:login_errors] %></li>
+		</ul>
+		<% end -%>
+			<%= simple_form_for( :session, url: '/login', html: {class: 'form-vertical'}) do |f| %>
+			<%= f.error_notification %>
+			<%= f.input :email %>
+			<%= f.input :password_digest %>
+			<%= f.button :submit, "Sign in" %>
+			<% end %>
+		</div>
+	</div>
+</body>
+</html>
