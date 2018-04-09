@@ -1,0 +1,198 @@
+
+<p>Find me in app/views/rerservation/index.html.erb</p>
+
+Hey this is the create a booking page
+
+<div class="top_section">
+
+  <div class="booking_info">
+    This is where the booking info will go
+  </div>
+
+  <div class="club_floorplan">
+
+    <div class="main_bar">
+      Main Bar
+    </div>
+    <% @tables.each do |table| %>
+
+    <div class="tables_and_dancefloor">
+
+      <div class="tdf_left_side">
+        <div class="tdf_columnA_tables">
+          <% if table.id == 1 %>
+                   <div class= "table_1 box">
+                     <%=table.id%>
+                     <br />
+                     <br />
+                    <%= table.min_price%>
+                   </div>
+                   <% end %>
+                   if table.id == 3
+
+                   <div  class= "table_3 box">
+                     Table 3
+                     <br />
+                     <br />
+                     $250
+                   </div>
+                   end
+                   <div class= "table_under_walkway box">
+                     Table 5
+                     <br />
+                     <br />
+                     $500
+                   </div>
+                   <div class="table_7 box">
+                     Table 7
+                     <br />
+                     <br />
+                     $500
+                   </div>
+             </div>
+
+             <div class="tdf_columnB_tables">
+                   <div class= "table_2 box">
+                   Table 2
+                   <br />
+                   <br />
+                   $250
+                   </div>
+                   <div class= "table_4 box">
+                   Table 4
+                   <br />
+                   <br />
+                   $250
+                   </div>
+                   <div class= "table_under_walkway box">
+                   Table 6
+                   <br />
+                   <br />
+                   $500
+                   </div>
+                   <div class= "table_8 box">
+                   Table 8
+                   <br />
+                   <br />
+                   $500
+                   </div>
+             </div>
+
+      </div>
+      <div class="tdf_middle_side">
+        <div class="dance_floor_booking">
+          Dance floor
+        </div>
+
+      </div>
+      <div class="tdf_right_side">
+
+        <div class="tdf_columnC_tables">
+              <div class="table_9 box">
+                Table 9
+                <br />
+                <br />
+                $250
+              </div>
+              <div class="table_11 box">
+                Table 11
+                <br />
+                <br />
+                $250
+              </div>
+              <div class="table_under_walkway box">
+                <br />
+                Owner's Table
+                <br />
+                <br />
+                <br />
+              </div>
+              <div class="table_15 box">
+                Table 15
+                <br />
+                <br />
+                $500
+              </div>
+        </div>
+        <div class="tdf_columnD_tables">
+                <div class= "table_10 box">
+                Table 10
+                <br />
+                <br />
+                $250
+                </div>
+                <div class= "table_12 box">
+                Table 12
+                <br />
+                <br />
+                $250
+                </div>
+                <div class= "table_under_walkway3 box">
+                Table 14
+                <br />
+                <br />
+                $500
+                </div>
+                <div class= "table_16 box">
+                Table 16
+                <br />
+                <br />
+                $500
+                </div>
+          </div>
+
+      </div>
+
+
+
+      <div>
+      <!-- <p> This is where I will add info about the table selection process and how deposits are again
+          non refundable and all that jazz. </p> -->
+      </div>
+
+    </div>
+
+    <div class= "vip_tables_andDJbooth_booking">
+
+     <div class="tl_left_vip_booking">
+       <br />
+       Left VIP
+       <br />
+       $1000
+     </div>
+
+     <div class="dj_booth_booking">
+       <br />
+       DJ Booth
+       <br />
+       $2500
+     </div>
+
+     <div class="tl_right_vip_booking">
+       <br />
+       Right VIP
+       <br />
+       $1000
+     </div>
+
+   </div>
+
+  </div>
+
+  <div class="payment_section">
+    This is where the credit card info will go
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="bottom_section">
+  This is where the rockwell photos carosel will go
+</div>

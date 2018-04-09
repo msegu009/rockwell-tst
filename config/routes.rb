@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'reservation/index'
+  get 'reservations/index'
 
   root 'landing#index'
   get 'landing/index'
+
+  # get '/tables' => "reservation#index"
 
 
   get "/city" => "city#city"

@@ -4,16 +4,192 @@
 body{
   color: white
 }
-
 .top_section{
+display: flex;
+
+}
+
+.booking_info{
+  margin-left: 15px;
+}
+
+.payment_section, .club_floorplan{
+  margin-left: 30px;
+}
+
+
+.tables_and_dancefloor, .tdf_left_side, .tdf_right_side, .vip_tables_andDJbooth_booking{
   display: flex;
 }
 
-.booking_info, .club_floorplan, .payment_section{
-  width: 325px;
+.tables_and_dancefloor{
+  margin-left: 12px;
+}
+
+.club_floorplan{
+  text-align: center;
+}
+
+.booking_info, .payment_section,{
+width: 355px;
 height:455px;
 background-color: grey;
 border: solid 2px;
 border-color: purple;
 margin-top: 30px;
+}
+.club_floorplan{
+width: 477px;
+height:455px;
+background-color: grey;
+border: solid 2px;
+border-color: purple;
+margin-top: 30px;
+}
+
+
+
+.main_bar{
+  width: 150px;
+  height: 24px;
+  background-color: grey;
+  border: solid 2px;
+  border-color: #fee388;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 148px;
+}
+
+
+.box{
+  width: 65px;
+  height: 65px;
+  background-color: grey;
+  border: solid 2px;
+  border-color: #fee388;
+}
+
+.dance_floor_booking{
+  width: 175px;
+  height: 277px;
+  background-color: grey;
+  border: solid 2px;
+  border-color: #fee388;
+  margin-left: 5px;
+  margin-top: 20px;
+
+}
+// *************Table Locations *****************
+.table_1{
+  margin-top: 20px;
+}
+.table_2{
+  margin-top: 20px;
+  margin-left: 2px;
+}
+
+.table_3{
+  margin-top: 87px;
+  margin-left: -132px;
+}
+
+.table_4{
+  margin-top: 87px;
+  margin-left: -65px;
+}
+
+.table_5{
+  margin-top: 165px;
+    margin-left: -132px;
+}
+
+.table_6{
+  margin-top: 165px;
+    margin-left: -65px;
+}
+
+.table_7{
+  margin-top: 232px;
+margin-left: -132px;
+}
+
+.table_8{
+  margin-top: 232px;
+margin-left: -65px;
+}
+
+.table_9{
+  margin-left: 5px;
+    margin-top: 20px;
+}
+
+.table_10{
+margin-top: 20px;
+margin-left: 2px;
+}
+
+.table_11{
+margin-top: 87px;
+    margin-left: -132px;
+}
+
+.table_12{
+margin-top: 87px;
+margin-left: -65px;
+}
+ // *****Owner's Table *********
+.table_13{
+margin-top: 165px;
+margin-left: -132px;
+}
+
+.table_14{
+margin-top: 165px;
+margin-left: -65px;
+}
+
+.table_15{
+margin-top: 232px;
+margin-left: -132px
+}
+
+.table_16{
+margin-top: 232px;
+margin-left: -65px;
+}
+
+// ******TABLE 17 *********
+.tl_left_vip_booking{
+  width: 132px;
+  height: 72px;
+  background-color: grey;
+  border: solid 2px;
+  border-color: #fee388;
+  margin-top: 3px;
+  margin-left: 12px;
+
+
+  }
+// ********TABLE 19 *********
+.tl_right_vip_booking{
+  width: 132px;
+  height: 72px;
+  background-color: grey;
+  border: solid 2px;
+  border-color: #fee388;
+  margin-top: 3px;
+  margin-left: 5px;
+
+}
+// *****DJ BOOTH TABLE 18********
+
+.dj_booth_booking{
+  width: 175px;
+  height: 72px;
+  background-color: grey;
+  border: solid 2px;
+  border-color: #fee388;
+  margin-top: 3px;
+  margin-left: 6px;
 }
