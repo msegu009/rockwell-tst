@@ -182,11 +182,8 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.7)
   rails (~> 5.1.6)
-<<<<<<< HEAD
-  rails_refactor
-=======
   rails-erd
->>>>>>> 3f08c8229f05d7e5691b57b0479b0d55421725d8
+  rails_refactor
   sass-rails (~> 5.0)
   simple_form
   spring
