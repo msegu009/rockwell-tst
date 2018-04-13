@@ -21,10 +21,20 @@ display: flex;
   margin-top: 10px;
 }
 
-.picker__date-display { background-color: rgb(121,134,203); }
+.picker__date-display{
+  background-color: #fee388;
+}
 
 .btn-flat{
   color: black;
+}
+
+#booking_num_of_males{
+  margin-top: -10px;
+}
+
+#booking_num_of_females{
+  margin-top: -19px;
 }
 
 
@@ -49,7 +59,7 @@ display: flex;
 
 .booking_info, .payment_section,{
 width: 355px;
-height:455px;
+height:500px;
 background-color: grey;
 border: solid 2px;
 border-color: purple;
@@ -57,7 +67,7 @@ margin-top: 30px;
 }
 .club_floorplan{
 width: 477px;
-height:455px;
+height:500px;
 background-color: grey;
 border: solid 2px;
 border-color: purple;

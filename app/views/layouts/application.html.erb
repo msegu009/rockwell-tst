@@ -9,29 +9,31 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
-  <nav>
-      <div class="nav-wrapper black">
-        <a href="/" class="brand-logo">  The VelvetRope</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="modal-trigger" href="#signin">Sign in</a></li>
-          <li><a class="modal-trigger" href="#signup">Sign up</a></li>
-        </ul>
-      </div>
-    </nav>
 
-    <div id="signup" class="modal grey darken-4">
-        <div class="modal-content">
-          <%= render 'users/signup' %>
+
+  <body>
+    <nav>
+        <div class="nav-wrapper black">
+          <a href="/" class="brand-logo">  The VelvetRope</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="modal-trigger" href="#signin">Sign in</a></li>
+            <li><a class="modal-trigger" href="#signup">Sign up</a></li>
+          </ul>
         </div>
-      </div>
+      </nav>
 
-      <div id="signin" class="modal grey darken-4">
+      <div id="signup" class="modal grey darken-4">
           <div class="modal-content">
-            <%= render 'users/login' %>
+            <%= render 'users/signup' %>
           </div>
         </div>
 
-  <body>
+
+        <div id="signin" class="modal grey darken-4">
+            <div class="modal-content">
+              <%= render 'users/login' %>
+            </div>
+          </div>
     <%= yield %>
   </body>
 </html>
