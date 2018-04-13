@@ -10,50 +10,6 @@
       <br>
     </div>
 
-<<<<<<< HEAD
-
-    <%= form_for @booking do |f| %>
-      <%= f.label "Date"%>
-      <input type="text" class="datepicker">
-      <%= f.text_field :day %>
-
-
-      <p>Button To check Tables</p>
-
-      <label>Table Number: </label>
-      <%= select_tag 'table_id', options_for_select(@tables.map{ |t| [t.id, t.name] }) %>
-      <br>
-
-      <label>Table Deposit</label>
-      <input type="text" value="" readonly>
-
-      <p>Group Info:</p>
-
-      <%= f.label :num_of_males, "Number of Males"%>:
-      <%= f.text_field :num_of_males%><br />
-
-      <%= f.label :num_of_females, "Number of Females" %>:
-      <%= f.text_field :num_of_females%><br />
-      <br>
-
-      <label>Atmosphere: Yes/No/Required</label>
-      <label>Atmosphere Total</label>
-      <input type="text" value="" readonly>
-      <br>
-      <br>
-      <label>Server Request: </label>
-      <%#= select_tag 'server_id', options_for_select(@servers.map{ |s| [s.id, s.name] }) %>
-      <br>
-
-      <%= f.label :expected_spend, "Total"%>:
-      <%= f.text_field :expected_spend%><br />
-
-
-
-
-
-      <%= f.submit "Reserve Table" %>
-=======
     <% if params[:day] %>
       <%= form_for @booking do |f| %>
         <p>Button To check Tables</p>
@@ -94,7 +50,6 @@
         <%= date_field_tag :day %>
         <%= submit_tag "Check Table Availability" %>
       <% end %>
->>>>>>> 9911708dae94ab208cef676f5227abb7844752af
     <% end %>
   </div>
 
