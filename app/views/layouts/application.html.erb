@@ -13,23 +13,13 @@
       <div class="nav-wrapper black">
         <a href="/" class="brand-logo">  The VelvetRope</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="modal-trigger" href="#signin">Sign in</a></li>
-          <li><a class="modal-trigger" href="#signup">Sign up</a></li>
+          <li><a href="/login">Sign in</a></li>
+          <li><a href="/login">Sign up</a></li>
         </ul>
       </div>
     </nav>
 
-    <div id="signup" class="modal grey darken-4">
-        <div class="modal-content">
-          <%= render 'users/signup' %>
-        </div>
-      </div>
-
-      <div id="signin" class="modal grey darken-4">
-          <div class="modal-content">
-            <%= render 'users/login' %>
-          </div>
-        </div>
+    
 
   <body>
     <%= yield %>

@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require jquery
 //= require materialize
+//= require turbolinks
 //= require_tree .
 
 $(document).ready(function(){
