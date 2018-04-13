@@ -30,6 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
 gem 'materialize-sass'
 gem 'jquery-rails'
+gem 'rails-erd'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

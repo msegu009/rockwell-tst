@@ -4,6 +4,7 @@ class ReservationsController < ApplicationController
   def index
     @tables = Table.all
     # render 'index0'
+    @booking = Booking.new
   end
 
   private

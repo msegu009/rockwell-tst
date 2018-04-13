@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'reservations/index'
 
+  post '/bookings' => 'bookings#create'
+
   root 'landing#index'
   get 'landing/index'
 

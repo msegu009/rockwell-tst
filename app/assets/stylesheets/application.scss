@@ -63,3 +63,53 @@ body {
 .zoom:hover {
   transform: scale(1.055);
 }
+
+// ******* Materialized Overides Go Below ********
+ // ****Revervations Page *******
+.picker__date-display{
+  background-color: purple;
+}
+
+.btn-flat{
+  color: black;
+}
+
+// .booking_info input{
+//   background-color: #fee388 !important;
+//   height: 2rem !important;
+// }
+
+.booking_info input:not([type]),
+.booking_info input[type=text]:not(.browser-default),
+.booking_info input[type=password]:not(.browser-default),
+.booking_info input[type=email]:not(.browser-default),
+.booking_info input[type=url]:not(.browser-default),
+.booking_info input[type=time]:not(.browser-default),
+.booking_info input[type=date]:not(.browser-default),
+.booking_info input[type=datetime]:not(.browser-default),
+.booking_info input[type=datetime-local]:not(.browser-default),
+.booking_info input[type=tel]:not(.browser-default),
+.booking_info input[type=number]:not(.browser-default),
+.booking_info input[type=search]:not(.browser-default),
+.booking_info textarea.materialize-textarea {
+    background-color: #fee388;
+    height: 2rem;
+    width: 50%;
+    float: right;
+    border: solid 2px;
+    border-color: purple;
+}
+
+.booking_info form{
+  margin-top: -27px;
+}
+
+select{
+  display: inline;
+  background-color: #fee388;
+  width: 12%;
+  height: 2em;
+  margin-left: 93px;
+  border: solid 2px;
+  border-color: purple;
+}
