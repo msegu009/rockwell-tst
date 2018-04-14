@@ -1,2 +1,80 @@
-<h1>Servers#rockwell</h1>
-<p>Find me in app/views/servers/rockwell.html.erb</p>
+<nav>
+<div class="nav-wrapper black">
+  <a href="/" class="brand-logo">  The VelvetRope</a>
+  <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <li><a class="modal-trigger" href="#signin">Sign in</a></li>
+    <li><a class="modal-trigger" href="#signup">Sign up</a></li>
+  </ul>
+</div>
+</nav>
+<div id="signup" class="modal grey darken-4">
+  <div class="modal-content">
+    <%= render 'users/signup' %>
+  </div>
+</div>
+
+
+  <div id="signin" class="modal grey darken-4">
+    <div class="modal-content">
+      <%= render 'users/login' %>
+    </div>
+  </div>
+
+  <nav>
+    <div class="nav-wrapper black">
+      <div class="col s12">
+        <a href="/city/miami" class="breadcrumb">Miami</a>
+        <a href="/clubs/rockwell/" class="breadcrumb">Rockwell</a>
+        <a href="#!" class="breadcrumb">Servers</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Headspace ^^^ -->
+  <div class="line"></div>
+  <%= image_tag "background2", :class => "fullscreen-bg" %>
+  <!-- Da booty body -->
+
+
+<div class="container">
+  <div class="row">
+    <% @servers.each do |server| %>
+      <div class="col s12 m6 l4">
+        <div id="custom-card" class="card black zoom">
+        <span class="card-title center-align">
+        <div id="line1">
+          <td><span id="a"><a href="/"><%=server.name %></a></span><span id="b"><a href="https://www.instagram.com/<%=server.instagram%>">@<%=server.instagram%></a></span></td>
+        </div>
+        </span>
+        <div class="card-image">
+        <%= image_tag server.photo, :class => "style_image" %>
+      </div>
+      <span class="card-title black-text center-align">
+      <a class="black-text" href="#">...</a>
+      </span>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+  <!-- Footyspace -->
+  <div class="line"></div>
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
