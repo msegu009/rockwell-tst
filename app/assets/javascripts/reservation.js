@@ -1,5 +1,3 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
 $(document).on("turbolinks:load ", function(){
 
 
@@ -13,6 +11,9 @@ $(document).on("turbolinks:load ", function(){
   });
 
   $("#date-changer").on("click", () => {
+    $(".djbooth").removeClass("green");
+    $(".box").removeClass("green");
+    $('#date-changer').css('background', '#4CAF50');
     let selectedDate = $("#day").val()
     let clubName = $("#clubname-hidden").val()
     let postData = {
@@ -30,12 +31,15 @@ $(document).on("turbolinks:load ", function(){
 
       data.forEach(function(table){
         if (table.available_today){
-          $('#' + table.id).addClass("green")
-        }else{
-          $('#' + table.id).addClass("red")
-
+          console.log('true');
+          $('#' + table.id).addClass("green");
+        } else {
+          console.log('false');
+          $('#' + table.id).removeClass("green");
         }
       })
+
+
 
       // let availability = $('.box')
       // // .data('available-today')
