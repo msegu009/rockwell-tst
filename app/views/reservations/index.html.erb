@@ -12,7 +12,14 @@
 
     <% if params[:day] %>
       <%= form_for @booking do |f| %>
-        <p>Button To check Tables</p>
+        <%= label_tag "Date"%>
+           <%= date_field_tag :day %>
+           <div class="check_tables_button">
+           <button id="date-changer" type="button">Check Table Availability</button>
+           <input id="clubname-hidden" type="hidden" value="<%= @club.name %>" />
+         </div>
+        <!-- <p>Button To check Tables</p> -->
+        <br>
 
         <label>Table Number: </label>
         <%= select_tag 'table_id', options_for_select(@tables.map{ |t| [t.id, t.name] }) %>
@@ -44,7 +51,7 @@
 
         <%= f.submit "Reserve Table" %>
       <% end %>
-      <%else %>
+    <%else %>
       <%= form_tag reservations_path, method: 'get' do %>
         <%= label_tag "Date"%>
         <%= date_field_tag :day %>
@@ -54,42 +61,233 @@
   </div>
 
 
-    <!-- end first section -->
+  <!-- end first section -->
 
-    <!-- second section -->
-    <div class="club_floorplan">
+  <!-- second section -->
+  <div class="club_floorplan">
 
-      <div class="main_bar">
-        Main Bar
-      </div>
+    <div class="main_bar">
+      Main Bar
+    </div>
 
-      <div class="tdf_middle_side">
-        <!-- <div class="tdf_middle_side"> -->
+    <div class="tdf_middle_side">
+      <!-- <div class="tdf_middle_side"> -->
 
-        <div class="tables_and_dancefloor">
+      <div class="tables_and_dancefloor">
 
-          <div class="tdf_left_side">
-            <% @club.floors.each do |floor|%>
-            <h1><%= floor.name%></h1>
-            <ul>
-            <% if params[:day] %>
-              <%floor.available_tables(params[:day]).each do |table| %>
-                <li>
-                  <%= table.id %> <br>
-                  <%=table.name%><%= "$" + table.min_price%><button>select</button>
-                </li>
-              <% end %>
-            <% else %>
-              <%floor.tables.each do |table| %>
-                <li>
-                  <%= table.id %> <br>
-                  <%=table.name%><%= "$" + table.min_price%><button>select</button>
-                </li>
-              <% end %>
+        <div class="tdf_left_side">
+          <% @tables2.where(id: [1,2,3,4,5,6,7,8]).each do |table| %>
+          <div class="tdf_columnA_tables">
+            <% if table.id == 1 %>
+            <div id="1" class="table_1 box">
+              <%=table.name%>
+              <br />
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
             <% end %>
-            </ul>
-            <%end%>
-            
+
+            <% if table.id == 3 %>
+            <div id="3" class="table_3 box">
+              <%=table.name%>
+              <br />
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+            <% end %>
+
+            <% if table.id == 5 %>
+            <div id="5" class= "table_5 box">
+              <%=table.name%>
+              <br />
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+            <% end %>
+
+            <% if table.id == 7 %>
+            <div id="7" class="table_7 box">
+              <%=table.name%>
+              <br />
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+            <% end %>
+          </div>
+
+          <div class="tdf_columnB_tables">
+
+            <% if table.id == 2 %>
+            <div id="2" class= "table_2 box">
+              <%=table.name%>
+              <br />
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+            <% end %>
+
+            <% if table.id == 4 %>
+            <div id="4" class= "table_4 box">
+              <%=table.name%>
+              <br />
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+            <% end %>
+
+            <% if table.id == 6 %>
+            <div id="6" class= "table_6 box">
+              <%=table.name%>
+              <br />
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+            <% end %>
+
+            <% if table.id == 8 %>
+            <div id="8" class= "table_8 box">
+              <%=table.name%>
+              <br />
+              <br />
+              <%= "$" + table.min_price%>
+            </div>
+            <% end %>
+          </div>
+          <% end %>
+
+          <!-- this div closes tdf_left_side        -->
+          <div class="dance_floor_booking">
+            Dance floor
+          </div>
+          <!-- this div closes dance_floor_booking -->
+
+
+          <div class="tdf_right_side">
+            <% @tables2.where(id: [9,10,11,12,13,14,15,16]).each do |table| %>
+
+            <div class="tdf_columnC_tables">
+
+              <% if table.id == 9 %>
+              <div id="9" class="table_9 box">
+                <%=table.name%>
+                <br />
+                <br />
+                <%= "$" + table.min_price%>
+              </div>
+              <% end %>
+
+              <% if table.id == 11 %>
+              <div id="11" class="table_11 box">
+                <%=table.name%>
+                <br />
+                <br />
+                <%= "$" + table.min_price%>
+              </div>
+              <% end %>
+
+              <% if table.id == 13 %>
+              <div id="13" class="table_13 box">
+                <br />
+
+                <%=table.name%>
+                <br />
+                <br />
+              </div>
+              <% end %>
+
+              <% if table.id == 15 %>
+              <div id="15" class="table_15 box">
+                <%=table.name%>
+                <br />
+                <br />
+                <%= "$" + table.min_price%>
+              </div>
+              <% end %>
+
+            </div>
+            <!-- this div closes tdf_columnC_tables -->
+            <div class="tdf_columnD_tables">
+
+              <% if table.id == 10 %>
+              <div  id="10"class= "table_10 box">
+                <%=table.name%>
+                <br />
+                <br />
+                <%= "$" + table.min_price%>
+              </div>
+              <% end %>
+
+              <% if table.id == 12 %>
+              <div id="12" class= "table_12 box">
+                <%=table.name%>
+                <br />
+                <br />
+                <%= "$" + table.min_price%>
+              </div>
+              <% end %>
+
+              <% if table.id == 14 %>
+              <div id="14" class= "table_14 box">
+                <%=table.name%>
+                <br />
+                <br />
+                <%= "$" + table.min_price%>
+              </div>
+              <% end %>
+
+              <% if table.id == 16 %>
+              <div id="16" class= "table_16 box">
+                <%=table.name%>
+                <br />
+                <br />
+                <%= "$" + table.min_price%>
+              </div>
+              <% end %>
+            </div>
+            <% end %>
+            <!-- this div closes tdf_columnD_tables -->
+
+          </div>
+          <!-- this div closes tdf_right_side -->
+        </div>
+        <!-- this div cloes tables and dance_floor_booking -->
+      </div>
+      <!-- this div closes out tdf_middle_side -->
+
+      <div class= "vip_tables_andDJbooth_booking">
+        <% @tables2.where(id: [17,18,19]).each do |table| %>
+
+        <% if table.id == 17 %>
+        <div id="17" class="tl_left_vip_booking">
+          <br />
+          Left VIP
+          <%=table.name%>
+          <br />
+          <%= "$" + table.min_price%>
+        </div>
+        <% end %>
+
+        <% if table.id == 18 %>
+        <div id="18" class="dj_booth_booking">
+          <br />
+          DJ Booth
+          <%=table.name%>
+          <br />
+          <%= "$" + table.min_price%>
+        </div>
+        <% end %>
+
+        <% if table.id == 19 %>
+        <div id="19" class="tl_right_vip_booking">
+          <br />
+          Right VIP
+          <%=table.name%>
+          <br />
+          <%= "$" + table.min_price%>
+        </div>
+        <% end %>
+        <% end %>
+
       </div>
 
 
@@ -99,6 +297,7 @@
 
       <!-- </div> -->
     </div>
+</div>
 
     <div class="payment_section">
       This is where the credit card info will go

@@ -37,6 +37,13 @@ display: flex;
   margin-top: -19px;
 }
 
+.check_tables_button button{
+  margin-left: 78px;
+  background-color: #fee388;
+  border-color: purple;
+
+}
+
 
 // ********CLUB LAYOUT SECTION ************
 
@@ -106,6 +113,14 @@ margin-top: 30px;
   margin-left: 5px;
   margin-top: 20px;
 
+}
+
+.ed{
+    width: 65px;
+    height: 65px;
+    background-color: grey;
+    border: solid 2px;
+    border-color: purple;
 }
 // *************Table Locations *****************
 .table_1{
@@ -195,11 +210,32 @@ margin-left: -65px;
   border-color: #fee388;
   margin-top: 3px;
   margin-left: 12px;
-
-
   }
+
+  .leftvip_ed{
+    width: 132px;
+    height: 72px;
+    background-color: grey;
+    border: solid 2px;
+    border-color: purple;
+    margin-top: 3px;
+    margin-left: 12px;
+    }
+
+
 // ********TABLE 19 *********
 .tl_right_vip_booking{
+  width: 132px;
+  height: 72px;
+  background-color: grey;
+  border: solid 2px;
+  border-color: #fee388;
+  margin-top: 3px;
+  margin-left: 5px;
+
+}
+
+.rightvip_ed{
   width: 132px;
   height: 72px;
   background-color: grey;
@@ -217,6 +253,16 @@ margin-left: -65px;
   background-color: grey;
   border: solid 2px;
   border-color: #fee388;
+  margin-top: 3px;
+  margin-left: 6px;
+}
+
+.dj_ed{
+  width: 175px;
+  height: 72px;
+  background-color: grey;
+  border: solid 2px;
+  border-color: purple;
   margin-top: 3px;
   margin-left: 6px;
 }
