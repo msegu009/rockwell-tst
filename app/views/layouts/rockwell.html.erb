@@ -36,7 +36,7 @@
 					<h1>Rockwell</h1>
 					<p>Welcome to Rockwell Miami<a href="#"></a></p>
 				</div>
-				<video autoplay loop playsinline>
+				<video autoplay loop playsinline muted>
 					<source src="/assets/banner.mp4" type="video/mp4">
 				</video>
 			</section>
@@ -60,12 +60,14 @@
 						</section>
 						<section>
 							<div class="content">
-								<header>
-									<a href="#" class="icon fa fa-table"><span class="label">Icon</span></a>
-									<h3><br></br>Table Layout</h3>
-								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-							</div>
+                                <header>
+                                <%= link_to reservations_path("Rockwell") do %>
+                                    <i class="icon fa fa-table label"></i>
+                                <% end %>
+                                    <h3><br></br>Table Layout</h3>
+                                </header>
+                                <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+                            </div>
 						</section>
 						<section>
 							<div class="content">
