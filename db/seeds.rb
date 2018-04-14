@@ -20,9 +20,7 @@ User.create(firstname: "Pat", lastname: "Patterson", email: "mail@mail.com", pas
 end
 
 club = Club.create(:name => "Rockwell", :city => "Miami")
-
 floor = Floor.create(:name =>"1", :club_id => club.id)
-
 # floors = []
 #
 # 5.times do |num|
@@ -35,7 +33,6 @@ floor = Floor.create(:name =>"1", :club_id => club.id)
 #     Table.create(name: "Table #{num}", min_price: "250", available_today: true, floor: floor)
 #   end
 # end
-
 table_list=[
     ["Table 1", "250", true, floor.id],
     ["Table 2", "250", true, floor.id],
@@ -62,7 +59,6 @@ Table.destroy_all
 table_list.each do |table|
   Table.create( :name => table[0], :min_price => table[floor.id], :available_today => table[2], :floor_id => table[3])
 end
-
 
 
 rockwell_server_list= [

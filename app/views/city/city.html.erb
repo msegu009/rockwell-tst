@@ -1,3 +1,27 @@
+
+
+<nav>
+    <div class="nav-wrapper black">
+      <a href="/" class="brand-logo">  The VelvetRope</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="modal-trigger" href="#signin">Sign in</a></li>
+        <li><a class="modal-trigger" href="#signup">Sign up</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="signup" class="modal grey darken-4">
+      <div class="modal-content">
+        <%= render 'users/signup' %>
+      </div>
+    </div>
+
+
+    <div id="signin" class="modal grey darken-4">
+        <div class="modal-content">
+          <%= render 'users/login' %>
+        </div>
+      </div>
+
 <!-- Breadcrumb -->
 <nav>
   <div class="nav-wrapper black">
@@ -21,7 +45,7 @@
       <a href="/city/miami">
         <div class="card zoom">
           <div class="card-image">
-            <img src="https://3.bp.blogspot.com/-Oh36gihXnSg/UsvfokoOmsI/AAAAAAAAA4s/WpUnRgi91Gw/s1600/1502277yuff.jpg">
+            <%= image_tag "cities/cities_miami", :class => "cities" %>
             <span class="card-title">Miami</span>
           </div>
       </a>
@@ -33,7 +57,7 @@
       <a href="#">
         <div class="card zoom">
           <div class="card-image">
-            <img src="http://cdn.wonderfulengineering.com/wp-content/uploads/2016/01/las-vegas-wallpaper-9.jpg">
+            <%= image_tag "cities/cities_lasvegas", :class => "cities" %>
             <span class="card-title">Las Vegas</span>
           </div>
       </a>
@@ -45,7 +69,7 @@
       <a href="#">
         <div class="card zoom">
           <div class="card-image">
-            <img src="https://wallpaperstudio10.com/static/wpdb/wallpapers/3840x2160/169630.jpg">
+            <%= image_tag "cities/cities_ibiza", :class => "cities" %>
             <span class="card-title">Ibiza</span>
           </div>
         </div>
@@ -61,7 +85,7 @@
       <a href="#">
         <div class="card zoom">
           <div class="card-image">
-            <img src="https://wallpaperstudio10.com/static/wpdb/wallpapers/3840x2160/168426.jpg">
+            <%= image_tag "cities/cities_hongkong", :class => "cities" %>
             <span class="card-title">Hong Kong</span>
           </div>
       </a>
@@ -73,7 +97,7 @@
       <a href="#">
         <div class="card zoom">
           <div class="card-image">
-            <img src="https://www.pixelstalk.net/wp-content/uploads/images1/Amsterdam-Widescreen-Wallpapers-screen.jpg">
+            <%= image_tag "cities/cities_amsterdam", :class => "cities" %>
             <span class="card-title">Amsterdam</span>
           </div>
       </a>
@@ -85,7 +109,7 @@
       <a href="#">
         <div class="card zoom">
           <div class="card-image">
-            <img src="http://www.baltana.com/files/wallpapers-9/Athens-Wallpaper-27657.jpg">
+            <%= image_tag "cities/cities_athens", :class => "cities" %>
             <span class="card-title">Athens</span>
           </div>
       </a>
@@ -101,7 +125,7 @@
       <a href="#">
         <div class="card zoom">
           <div class="card-image">
-            <img src="https://wallpapercave.com/wp/wp1825719.jpg">
+            <%= image_tag "cities/cities_barcelona", :class => "cities" %>
             <span class="card-title">Barcelona</span>
           </div>
         </a>
@@ -113,7 +137,7 @@
       <a href="#">
         <div class="card zoom">
           <div class="card-image">
-            <img src="http://globalmedicalco.com/photos/globalmedicalco/18/86693.jpg">
+            <%= image_tag "cities/cities_newyork", :class => "cities" %>
             <span class="card-title">New York</span>
           </div>
         </div>
@@ -125,7 +149,7 @@
       <a href="#">
         <div class="card zoom">
           <div class="card-image">
-            <img src="http://travelhdwallpapers.com/wp-content/uploads/2017/03/Bangkok-Wallpaper-10.jpeg">
+            <%= image_tag "cities/cities_bangkok", :class => "cities" %>
             <span class="card-title">Bangkok</span>
           </div>
         </div>

@@ -5,35 +5,21 @@
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
 
   <body>
-    <nav>
-        <div class="nav-wrapper black">
-          <a href="/" class="brand-logo">  The VelvetRope</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="modal-trigger" href="#signin">Sign in</a></li>
-            <li><a class="modal-trigger" href="#signup">Sign up</a></li>
-          </ul>
-        </div>
-      </nav>
+   
 
-      <div id="signup" class="modal grey darken-4">
-          <div class="modal-content">
-            <%= render 'users/signup' %>
-          </div>
-        </div>
-
-
-        <div id="signin" class="modal grey darken-4">
-            <div class="modal-content">
-              <%= render 'users/login' %>
-            </div>
-          </div>
+      
     <%= yield %>
+
   </body>
 </html>

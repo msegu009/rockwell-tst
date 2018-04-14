@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
 
+
+  get 'servers/rockwell'
+
+  post '/bookings' => 'bookings#create'
+
   post '/bookings' => 'bookings#create'
 
   root 'landing#index'
@@ -18,6 +23,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   get 'clubs/:clubname' => "rockwell#index"
+  get 'clubs/:clubname/servers' => "servers#rockwell"
   get '/clubs/:clubname/reservations' => "reservations#index", as: 'reservations'
   post '/available_tables_for_date' => "reservations#tables", as: 'reserved_tables_for'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
