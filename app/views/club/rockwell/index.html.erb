@@ -57,7 +57,10 @@
 						<section>
 							<div class="content">
 								<header>
-									<a class="icon fa fa-table"><%= link_to("Table", "/clubs/:clubname/reservations",) %><span class="label">Icon</span></a>
+									<%= link_to reservations_path do %>
+										<span class="label icon fa fa-table"">Icon</span>
+									<% end %>
+									<a href="#" class="icon fa fa-table"><span class="label">Icon</span></a>
 									<h3><br></br>Table Layout</h3>
 								</header>
 								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
