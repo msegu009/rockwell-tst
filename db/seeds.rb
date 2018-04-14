@@ -62,14 +62,14 @@ end
 
 
 rockwell_server_list= [
-  ["Bracks", "rockwell_bracks", "bracksss", 11],
-  ["Gracee", "rockwell_gracee", "graceelove", 11],
-  ["Jyll", "rockwell_jyll", "jyllmarie", 11],
-  ["Kaite", "rockwell_kaite", "kaitsgreat", 11],
-  ["Kristy", "rockwell_kristy", "kristylslife", 11],
-  ["Nancy", "rockwell_nancy", "nancyismia", 11],
-  ["Tessa", "rockwell_tessa", "tess_valdera", 11],
-  ["Vess", "rockwell_vee", "vee_lynn", 11]
+  ["Bracks", "rockwell_bracks", "bracksss", 1],
+  ["Gracee", "rockwell_gracee", "graceelove", 1],
+  ["Jyll", "rockwell_jyll", "jyllmarie", 1],
+  ["Kaite", "rockwell_kaite", "kaitsgreat", 1],
+  ["Kristy", "rockwell_kristy", "kristylslife", 1],
+  ["Nancy", "rockwell_nancy", "nancyismia", 1],
+  ["Tessa", "rockwell_tessa", "tess_valdera", 1],
+  ["Vess", "rockwell_vee", "vee_lynn", 1]
 ]
 
 Server.destroy_all
