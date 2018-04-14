@@ -76,7 +76,7 @@ Server.destroy_all
 rockwell_server_list.each do |server|
   Server.create( :name => server[0], :photo => server[1], :instagram => server[2], :club_id => server[3])
 end
-
+  
 
 table_for_bookings = ((1..12).to_a + (14..19).to_a).shuffle!
 users_for_booking = User.all.pluck(:id).shuffle!
