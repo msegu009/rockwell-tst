@@ -51,3 +51,5 @@ Server.destroy_all
 rockwell_server_list.each do |server|
   Server.create( :name => server[0], :photo => server[floor.id], :instagram => server[2], :club_id => server[3])
 end
+
+
