@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
 
-  get 'servers/rockwell'
+  get '/rockwell/servers'
 
   post '/bookings' => 'bookings#create'
 
