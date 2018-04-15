@@ -1,9 +1,9 @@
 
-
-
+<div id="wrapper">
 <div class="top_section">
 
   <!-- first section -->
+
   <div class="booking_info">
     <div class="booking_info1">
       <p class="customer_name">Hello <%= @current_user ? @current_user.firstname : "Customer" %> </p> <!-- TODO fix this-->
@@ -14,7 +14,7 @@
       <%= form_for @booking do |f| %>
         <%= label_tag "Date"%>
            <%= date_field_tag :day %>
-           <div class="check_tables_button">
+           <div class="check_tables_button gray">
            <button id="date-changer" type="button">Check Table Availability</button>
            <input id="clubname-hidden" type="hidden" value="<%= @club.name %>" />
          </div>
@@ -67,6 +67,8 @@
         <%= submit_tag "Check Table Availability" %>
       <% end %>
     <% end %>
+    <br>
+    <br>
           <form action="your-server-side-code" method="POST">
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -103,6 +105,7 @@
               <%=table.name%>
               <br />
               <br />
+
               <%= "$" + table.min_price.to_s %>
             </div>
             <% end %>
@@ -319,19 +322,19 @@
     </div>
 </div>
 
-    <div class="payment_section">
+    <!-- <div class="payment_section">
 
-    </div>
+    </div> -->
 
     <!-- this div closes out floorplan -->
     <!-- end second section -->
 
     <!-- third section -->
-    <br>
+   
     <!-- end third section -->
 
   </div><!--end top section-->
-
+</div>
   <div class="bottom_section">
     <p> Above you can see the exact table layout for Rockwell! Enter your desired reservation date on the left, and then click the "Check Table Availability" button to see which table are available. The available tables will turn green! Then select your table, enter your group information and server request to complete your table reservation! </p>
   </div>

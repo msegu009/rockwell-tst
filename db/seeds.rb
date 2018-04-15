@@ -41,7 +41,8 @@ floor = Floor.create(:name =>"1", :club_id => club.id)
 
 price = 250
 price2 = 500
-price3 = 
+price3 = 1000
+price4 = 2000
 table_list=[
     ["Table 1", price, true, floor.id],
     ["Table 2", price, true, floor.id],
@@ -59,9 +60,15 @@ table_list=[
     ["Table 14", price2, true, floor.id],
     ["Table 15", price2, true, floor.id],
     ["Table 16", price2, true, floor.id],
+<<<<<<< HEAD
     ["Table 17", 1000, true, floor.id],
     ["Table 18", 2000, true, floor.id],
     ["Table 19", 1000, true, floor.id]
+=======
+    ["Table 17", price3, true, floor.id],
+    ["Table 18", price4, true, floor.id],
+    ["Table 19", price3, true, floor.id]
+>>>>>>> 0405b827854e0131d54a59a02ce12357694e716d
   ]
 
 Table.destroy_all
