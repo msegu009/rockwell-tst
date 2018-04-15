@@ -58,6 +58,17 @@
         <%= submit_tag "Check Table Availability" %>
       <% end %>
     <% end %>
+          <form action="your-server-side-code" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_XcZDuXi6mofUZLtwZpiaSH3D"
+          data-amount="50000"
+          data-name="Velvet Rope"
+          data-description="Table charge"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="payment_section">
+        </script>
+      </form>
   </div>
 
 
@@ -300,7 +311,7 @@
 </div>
 
     <div class="payment_section">
-      This is where the credit card info will go
+
     </div>
 
     <!-- this div closes out floorplan -->

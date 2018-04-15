@@ -29,4 +29,6 @@ class ReservationsController < ApplicationController
   def set_club
     @club = Club.find_by(name: params[:clubname].capitalize)
   end
+
+
 end
