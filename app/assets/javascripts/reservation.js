@@ -30,7 +30,7 @@ $(document).on("turbolinks:load ", function(){
 
       data.forEach(function(table){
         if (table.available_today){
-          $('#' + table.id).addClass("green")
+          $('#' + table.id).addClass("light-green accent-4 darken-2")
         }else{
           $('#' + table.id).addClass("red")
 
