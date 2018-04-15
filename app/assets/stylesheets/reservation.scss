@@ -9,7 +9,9 @@ body{
 display: flex;
 
 }
-
+label {
+  border-bottom: solid 1px rgb(83, 83, 83);
+}
 // ******* CLUB BOOKING INFO SECTION ************
 
 .booking_info{
@@ -22,7 +24,7 @@ display: flex;
 }
 
 .picker__date-display{
-  background-color: #fee388;
+  background-color: #bdbdbd;
 }
 
 .btn-flat{
@@ -39,9 +41,8 @@ display: flex;
 
 .check_tables_button button{
   margin-left: 78px;
-  background-color: #fee388;
-  border-color: purple;
-
+  background-color: transparent;
+  border-color: white;
 }
 
 
@@ -67,17 +68,17 @@ display: flex;
 .booking_info, .payment_section,{
 width: 355px;
 height:500px;
-background-color: grey;
+background-color: #212121;
 border: solid 2px;
-border-color: purple;
+border-color: #34b4f4;
 margin-top: 30px;
 }
 .club_floorplan{
 width: 477px;
 height:500px;
-background-color: grey;
+background-color: #212121;
 border: solid 2px;
-border-color: purple;
+border-color: #34b4f4;
 margin-top: 30px;
 }
 
@@ -86,9 +87,9 @@ margin-top: 30px;
 .main_bar{
   width: 150px;
   height: 24px;
-  background-color: grey;
+  background-color: transparent;
   border: solid 2px;
-  border-color: #fee388;
+  border-color: #34b4f4;
   text-align: center;
   font-weight: bold;
   margin-top: 5px;
@@ -99,27 +100,31 @@ margin-top: 30px;
 .box{
   width: 65px;
   height: 65px;
-  background-color: grey;
+  background-color: transparent;
   border: solid 2px;
-  border-color: #fee388;
+  border-color: #white;
 }
 
 .dance_floor_booking{
   width: 175px;
   height: 277px;
-  background-color: grey;
+  background-color: transparent;
   border: solid 2px;
-  border-color: #fee388;
+  border-color: #34b4f4;
   margin-left: 5px;
   margin-top: 20px;
 
 }
 
-.grey{
-    background-color: grey;
+.ed{
+    width: 65px;
+    height: 65px;
+    background-color: transparent;
     border: solid 2px;
-    border-color: purple;
+    border-color: #34b4f4;
 }
+
+
 // *************Table Locations *****************
 .table_1{
   margin-top: 20px;
@@ -203,35 +208,67 @@ margin-left: -65px;
 .tl_left_vip_booking{
   width: 132px;
   height: 72px;
-  background-color: grey;
+  background-color: transparent;
   border: solid 2px;
-  border-color: #fee388;
+  border-color: white;
   margin-top: 3px;
   margin-left: 12px;
   }
+
+
+  .leftvip_ed{
+    width: 132px;
+    height: 72px;
+    background-color: transparent;
+    border: solid 2px;
+    border-color: white;
+    margin-top: 3px;
+    margin-left: 12px;
+    }
+
 
 
 // ********TABLE 19 *********
 .tl_right_vip_booking{
   width: 132px;
   height: 72px;
-  background-color: grey;
+  background-color: transparent;
   border: solid 2px;
-  border-color: #fee388;
+  border-color: white;
   margin-top: 3px;
   margin-left: 5px;
 
 }
 
 
+.rightvip_ed{
+  width: 132px;
+  height: 72px;
+  background-color: transparent;
+  border: solid 2px;
+  border-color: white;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
 // *****DJ BOOTH TABLE 18********
 
 .dj_booth_booking{
   width: 175px;
   height: 72px;
-  background-color: grey;
+  background-color: transparent;
   border: solid 2px;
-  border-color: #fee388;
+  border-color: white;
+  margin-top: 3px;
+  margin-left: 6px;
+}
+
+.dj_ed{
+  width: 175px;
+  height: 72px;
+  background-color: transparent;
+  border: solid 2px;
+  border-color: white;
   margin-top: 3px;
   margin-left: 6px;
 }

@@ -78,14 +78,15 @@ rockwell_server_list= [
   ["Kristy", "rockwell_kristy", "kristylslife", 1],
   ["Nancy", "rockwell_nancy", "nancyismia", 1],
   ["Tessa", "rockwell_tessa", "tess_valdera", 1],
-  ["Vess", "rockwell_vee", "vee_lynn", 1]
+  ["Vess", "rockwell_vee", "vee_lynn", 1],
+  ["Via","rockwell_via","via.koko_", 1]
 ]
 
 Server.destroy_all
 rockwell_server_list.each do |server|
   Server.create( :name => server[0], :photo => server[1], :instagram => server[2], :club_id => server[3])
 end
-  
+
 
 table_for_bookings = ((1..12).to_a + (14..19).to_a).shuffle!
 users_for_booking = User.all.pluck(:id).shuffle!
@@ -109,6 +110,5 @@ users_for_booking = User.all.pluck(:id).shuffle!
                   user_id: user,
                   expected_spend: exp_spend
                 )
-
 
 end

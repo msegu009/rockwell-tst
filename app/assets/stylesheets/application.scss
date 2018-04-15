@@ -70,7 +70,7 @@ body {
 // ******* Materialized Overides Go Below ********
  // ****Revervations Page *******
 .picker__date-display{
-  background-color: purple;
+  background-color: #34b4f4;
 }
 
 .btn-flat{
@@ -95,12 +95,15 @@ body {
 .booking_info input[type=number]:not(.browser-default),
 .booking_info input[type=search]:not(.browser-default),
 .booking_info textarea.materialize-textarea {
-    background-color: #fee388;
+    background-color: transparent;
     height: 2rem;
     width: 50%;
     float: right;
     border: solid 2px;
-    border-color: purple;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: white;
 }
 
 .booking_info form{
@@ -109,11 +112,10 @@ body {
 
 select{
   display: inline;
-  background-color: #fee388;
+  background-color: transparent;
   width: 12%;
   height: 2em;
   margin-left: 93px;
   border: solid 2px;
-  border-color: purple;
+  border-color: #34b4f4;
 }
-

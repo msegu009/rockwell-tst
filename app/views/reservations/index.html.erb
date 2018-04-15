@@ -67,6 +67,17 @@
         <%= submit_tag "Check Table Availability" %>
       <% end %>
     <% end %>
+          <form action="your-server-side-code" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_XcZDuXi6mofUZLtwZpiaSH3D"
+          data-amount="50000"
+          data-name="Velvet Rope"
+          data-description="Table charge"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="payment_section">
+        </script>
+      </form>
   </div>
 
 
@@ -309,7 +320,7 @@
 </div>
 
     <div class="payment_section">
-      This is where the credit card info will go
+
     </div>
 
     <!-- this div closes out floorplan -->
@@ -322,7 +333,7 @@
   </div><!--end top section-->
 
   <div class="bottom_section">
-    This is where the paragraph with a lot of info is going to go.
+    <p> Above you can see the exact table layout for Rockwell! Enter your desired reservation date on the left, and then click the "Check Table Availability" button to see which table are available. The available tables will turn green! Then select your table, enter your group information and server request to complete your table reservation! </p>
   </div>
 
   <div class="slider_of_rockwell_photos">
