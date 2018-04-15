@@ -59,9 +59,9 @@ table_list=[
     ["Table 14", price2, true, floor.id],
     ["Table 15", price2, true, floor.id],
     ["Table 16", price2, true, floor.id],
-    ["Table 17", 1,000, true, floor.id],
-    ["Table 18", 2,000, true, floor.id],
-    ["Table 19", 1,000, true, floor.id]
+    ["Table 17", 1000, true, floor.id],
+    ["Table 18", 2000, true, floor.id],
+    ["Table 19", 1000, true, floor.id]
   ]
 
 Table.destroy_all
