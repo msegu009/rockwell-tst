@@ -4,6 +4,7 @@ class ReservationsController < ApplicationController
   def index
     @servers = Server.all
     @booking = Booking.new
+   
     @tables2 = @club.tables
     @tables = @club.floors.map { |f| f.tables.all }.flatten
     if params[:day]
@@ -11,6 +12,13 @@ class ReservationsController < ApplicationController
     end
     @tables.reject! { |t| t.id == 13 }
   end
+
+  # def update
+  #  @tables = @table.id.each { |r| r.tables.all }
+  #  if @table(params[:id]) = r(params[:id])
+  #    @table(params[:min_price])
+  #   end
+  # end
 
   def tables
     @tables = @club.floors.map { |f| f.tables.all }.flatten

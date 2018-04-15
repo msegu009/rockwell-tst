@@ -22,12 +22,15 @@
         <br>
 
         <label>Table Number: </label>
-        <%= select_tag 'table_id', options_for_select(@tables.map{ |t| [t.id, t.name] }) %>
+        <span id='chingy'>
+        <%= select_tag 'table_id', options_for_select(@tables.map{ |t| [t.id, t.min_price] }, {:onchange=> "alert('Hello');"}) %>
+        
+        </span>
         <br>
 
         <label>Table Deposit</label>
-        <%= f.label :expected_spend, "Table Deposit" %>:
-        <%= f.text_field :expected_spend %><br>
+        <input id="results" type="text" value="" readonly>
+
         <p>Group Info:</p>
 
         <%= f.label :num_of_males, "Number of Males"%>:
@@ -42,9 +45,15 @@
         <input type="text" value="" readonly>
         <br>
         <br>
+       
         <label>Server Request: </label>
+        <span id='yonce'>
         <%= select_tag 'server_id', options_for_select(@servers.map{ |s| s.name }) %>
+        </span>
         <br>
+
+        <label>Server Deposit</label>
+        <input id="sresults" type="text" value="" readonly>
 
         <%= f.label :expected_spend, "Total"%>:
         <%= f.text_field :expected_spend%><br />
@@ -258,7 +267,7 @@
         <% @tables2.where(id: [17,18,19]).each do |table| %>
 
         <% if table.id == 17 %>
-        <div id="17" class="tl_left_vip_booking djbooth">
+        <div id="17" class="tl_left_vip_booking">
           <br />
           Left VIP
           <%=table.name%>
@@ -268,7 +277,7 @@
         <% end %>
 
         <% if table.id == 18 %>
-        <div id="18" class="dj_booth_booking djbooth">
+        <div id="18" class="dj_booth_booking">
           <br />
           DJ Booth
           <%=table.name%>
@@ -278,7 +287,7 @@
         <% end %>
 
         <% if table.id == 19 %>
-        <div id="19" class="tl_right_vip_booking djbooth">
+        <div id="19" class="tl_right_vip_booking">
           <br />
           Right VIP
           <%=table.name%>

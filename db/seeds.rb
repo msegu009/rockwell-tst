@@ -30,29 +30,38 @@ floor = Floor.create(:name =>"1", :club_id => club.id)
 #
 # floors.each do |floor|
 #   10.times do |num|
-#     Table.create(name: "Table #{num}", min_price: "250", available_today: true, floor: floor)
+#     Table.create(name: "Table #{num}", min_price: price, available_today: true, floor: floor)
 #   end
 # end
+
+# tablelist = []
+# 20.times do |t|
+#   tablelist <<  ["Table #{t}", Random.rand(250, 2000), true, floor.id]
+# end
+
+price = 250
+price2 = 500
+price3 = 
 table_list=[
-    ["Table 1", "250", true, floor.id],
-    ["Table 2", "250", true, floor.id],
-    ["Table 3", "250", true, floor.id],
-    ["Table 4", "250", true, floor.id],
-    ["Table 5", "500", true, floor.id],
-    ["Table 6", "500", true, floor.id],
-    ["Table 7", "500", true, floor.id],
-    ["Table 8", "500", true, floor.id],
-    ["Table 9", "250", true, floor.id],
-    ["Table 10", "250", true, floor.id],
-    ["Table 11", "250", true, floor.id],
-    ["Table 12", "250", true, floor.id],
-    ["Owner's Table", "0", false, floor.id],
-    ["Table 14", "500", true, floor.id],
-    ["Table 15", "500", true, floor.id],
-    ["Table 16", "500", true, floor.id],
-    ["Table 17", "1,000", true, floor.id],
-    ["Table 18", "2,000", true, floor.id],
-    ["Table 19", "1,000", true, floor.id]
+    ["Table 1", price, true, floor.id],
+    ["Table 2", price, true, floor.id],
+    ["Table 3", price, true, floor.id],
+    ["Table 4", price, true, floor.id],
+    ["Table 5", price2, true, floor.id],
+    ["Table 6", price2, true, floor.id],
+    ["Table 7", price2, true, floor.id],
+    ["Table 8", price2, true, floor.id],
+    ["Table 9", price, true, floor.id],
+    ["Table 10", price, true, floor.id],
+    ["Table 11", price, true, floor.id],
+    ["Table 12", price, true, floor.id],
+    ["Owner's Table", 0, false, floor.id],
+    ["Table 14", price2, true, floor.id],
+    ["Table 15", price2, true, floor.id],
+    ["Table 16", price2, true, floor.id],
+    ["Table 17", 1,000, true, floor.id],
+    ["Table 18", 2,000, true, floor.id],
+    ["Table 19", 1,000, true, floor.id]
   ]
 
 Table.destroy_all
