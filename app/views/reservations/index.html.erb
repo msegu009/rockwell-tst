@@ -10,7 +10,7 @@
       <br>
     </div>
 
-    <% if params[:day] %>
+    <% #if params[:day] %>
       <%= form_for @booking do |f| %>
         <%= label_tag "Date"%>
            <%= date_field_tag :day %>
@@ -37,7 +37,7 @@
         <%= f.text_field :num_of_females%><br />
         <br>
 
-        <label>Atmosphere: Yes/No/Required</label>
+
         <label>Atmosphere Total</label>
         <input type="text" value="" readonly>
         <br>
@@ -51,13 +51,13 @@
 
         <%= f.submit "Reserve Table" %>
       <% end %>
-    <%else %>
-      <%= form_tag reservations_path, method: 'get' do %>
-        <%= label_tag "Date"%>
-        <%= date_field_tag :day %>
-        <%= submit_tag "Check Table Availability" %>
-      <% end %>
-    <% end %>
+    <%#else %>
+      <%#= form_tag reservations_path, method: 'get' do %>
+        <%#= label_tag "Date"%>
+        <%#= date_field_tag :day %>
+        <%#= submit_tag "Check Table Availability" %>
+      <%# end %>
+    <% #end %>
           <form action="your-server-side-code" method="POST">
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
