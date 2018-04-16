@@ -227,6 +227,7 @@ margin-left: -65px;
     }
 
 
+
 // ********TABLE 19 *********
 .tl_right_vip_booking{
   width: 132px;
@@ -248,7 +249,7 @@ margin-left: -65px;
   border-color: white;
   margin-top: 3px;
   margin-left: 5px;
-
+}
 
 // *****DJ BOOTH TABLE 18********
 
@@ -271,4 +272,12 @@ margin-left: -65px;
   margin-top: 3px;
   margin-left: 6px;
 }
+#wrapper{
+  width: 70%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.booking_info{
+  overflow: auto;
 }

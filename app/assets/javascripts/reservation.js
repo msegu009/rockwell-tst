@@ -1,5 +1,3 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
 $(document).on("turbolinks:load ", function(){
 
 
@@ -56,3 +54,15 @@ $(document).on("turbolinks:load ", function(){
 })
 
 // <option value="Table 1">1</option>
+
+$(document).ready(function(){
+    $("#chingy").on('change', function() {
+        document.getElementById('results').value = $('#table_id').val();
+    });
+});
+
+$(document).ready(function(){
+    $("#yonce").on('change', function() {
+        document.getElementById('sresults').value = parseInt("150");
+  });
+});
