@@ -63,6 +63,6 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#yonce").on('change', function() {
-        document.getElementById('sresults').value = parseInt("150");
+        document.getElementById('sresults').value = parseInt(300);
   });
 });

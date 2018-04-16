@@ -10,7 +10,7 @@
       <br>
     </div>
 
-    <% if params[:day] %>
+
       <%= form_for @booking do |f| %>
         <%= label_tag "Date"%>
            <%= date_field_tag :day %>
@@ -60,13 +60,7 @@
 
         <%= f.submit "Reserve Table" %>
       <% end %>
-    <%else %>
-      <%= form_tag reservations_path, method: 'get' do %>
-        <%= label_tag "Date"%>
-        <%= date_field_tag :day %>
-        <%= submit_tag "Check Table Availability" %>
-      <% end %>
-    <% end %>
+
     <br>
     <br>
           <form action="your-server-side-code" method="POST">
