@@ -263,7 +263,7 @@ margin-left: -65px;
   margin-left: 6px;
 }
 
-.dj_ed{
+.dj_ed {
   width: 175px;
   height: 72px;
   background-color: transparent;
@@ -271,4 +271,13 @@ margin-left: -65px;
   border-color: white;
   margin-top: 3px;
   margin-left: 6px;
+}
+#wrapper{
+  width: 70%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.booking_info{
+  overflow: auto;
 }

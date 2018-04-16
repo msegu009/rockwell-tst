@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "/city/miami" => "club#index"
   get "/city" => "city#city"
 
-
+  get "/tables" => 'reservationss#table'
 
   get '/login' => 'users#new'
 
