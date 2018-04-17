@@ -27,9 +27,12 @@ body {
 }
 
 .test {
-  background-color: black;
   border: solid 1px white;
-  height: 100px;
+  height: auto;
+  width: auto;
+}
+.test2 {
+  border: 2px;
 }
 
 .line {
@@ -110,10 +113,10 @@ body {
   margin-top: -27px;
 }
 
-select{
+select {
   display: inline;
   background-color: transparent;
-  width: 12%;
+  width: 100px;
   height: 2em;
   margin-left: 93px;
   border: solid 2px;

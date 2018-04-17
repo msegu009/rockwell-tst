@@ -1,11 +1,11 @@
 <nav>
-<div class="nav-wrapper black">
-  <a href="/" class="brand-logo">  The VelvetRope</a>
-  <ul id="nav-mobile" class="right hide-on-med-and-down">
-    <li><a class="modal-trigger" href="#signin">Sign in</a></li>
-    <li><a class="modal-trigger" href="#signup">Sign up</a></li>
-  </ul>
-</div>
+  <div class="nav-wrapper black">
+    <a href="/" class="brand-logo">  The VelvetRope</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a class="modal-trigger" href="#signin">Sign in</a></li>
+      <li><a class="modal-trigger" href="#signup">Sign up</a></li>
+    </ul>
+  </div>
 </nav>
 <div id="signup" class="modal grey darken-4">
   <div class="modal-content">
@@ -14,103 +14,124 @@
 </div>
 
 
-  <div id="signin" class="modal grey darken-4">
-    <div class="modal-content">
-      <%= render 'users/login' %>
+<div id="signin" class="modal grey darken-4">
+  <div class="modal-content">
+    <%= render 'users/login' %>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-wrapper black">
+    <div class="col s12">
+      <a href="/city/miami" class="breadcrumb">Miami</a>
+      <a href="/clubs/rockwell/" class="breadcrumb">Rockwell</a>
+      <a href="#!" class="breadcrumb">Reservations</a>
     </div>
   </div>
-
-  <nav>
-    <div class="nav-wrapper black">
-      <div class="col s12">
-        <a href="/city/miami" class="breadcrumb">Miami</a>
-        <a href="/clubs/rockwell/" class="breadcrumb">Rockwell</a>
-        <a href="#!" class="breadcrumb">Reservations</a>
-      </div>
-    </div>
-  </nav>
-  <div class="line"></div>
-  <%= image_tag "background2", :class => "fullscreen-bg" %>
+</nav>
+<div class="line"></div>
+<%= image_tag "background2", :class => "fullscreen-bg" %>
   <br>
 
-<div id="wrapper">
-<div class="top_section">
+  <div id="wrapper">
+    <div class="top_section">
 
-  <!-- first section -->
+      <!-- first section -->
 
-  <div class="booking_info">
-    <div class="booking_info1">
-      <p class="customer_name">Hello <%= @current_user ? @current_user.firstname : "Customer" %> </p> <!-- TODO fix this-->
+    <div class="booking_info">
+
+      <div class="booking_info1">
+        <p class="customer_name">Hello <%= @current_user ? @current_user.firstname : "Customer" %></p>
+      </div>
       <br>
-    </div>
 
-    <% #if params[:day] %>
-      <%= form_for @booking do |f| %>
+      <div class="check_tables_button gray">
+        <%= form_for @booking do |f| %>
         <%= label_tag "Date"%>
-           <%= date_field_tag :day %>
-           <div class="check_tables_button gray">
-           <button id="date-changer" type="button">Check Table Availability</button>
-           <input id="clubname-hidden" type="hidden" value="<%= @club.name %>" />
-         </div>
-        <!-- <p>Button To check Tables</p> -->
-        <br>
+        <%= date_field_tag :day %>
+        <button id="date-changer" type="button">Check Table Availability</button>
+        <input id="clubname-hidden" type="hidden" value="<%= @club.name %>" />
+      </div>
+                <!-- <p>Button To check Tables</p> -->
+      <br>
+      <div class="test2">
 
-        <label>Table Number: </label>
+      <label>Table Number:  </label>
         <span id='chingy'>
-        <%= select_tag 'table_id', options_for_select(@tables.map{ |t| [t.id, t.min_price] }, {:onchange=> "alert('Hello');"}) %>
+          <%= select_tag 'table_id', options_for_select(@tables.map{ |t| [t.id, t.min_price] }, {:onchange=> "alert('Hello');"}) %>
         </span>
-        <br>
+      </div>
+      <br>
 
+      <div class="test2">
         <label>Table Deposit</label>
         <input id="results" type="text" value="" readonly>
+      </div>
 
+      <div class="test2">
         <p>Group Info:</p>
         <label>Number of Males :</label>
         <span id="mels">
-        <input id="nresults" type="text" >
+          <input id="nresults" type="text" >
         </span>
-        <br>
+      </div>
 
+      <br>
+
+      <div class="test2">
         <%= f.label :num_of_females, "Number of Females" %>:
         <%= f.text_field :num_of_females %><br />
-        <br>
+      </div>
 
+      <br>
+      <div class="test2">
         <%= f.label :atmosphere %> :<br />
         <input id="aresults" type="text" value="" readonly>
         <span id="yaus">
-        <%= f.radio_button(:atmosphere, "Yes", value: true, class:"radio-btn", id:"radioyes", checked:( @booking.atmosphere && @booking.atmosphere == true ) ? true : false ) %> Yes <br>
+          <%= f.radio_button(:atmosphere, "Yes", value: true, class:"radio-btn", id:"radioyes", checked:( @booking.atmosphere && @booking.atmosphere == true ) ? true : false ) %> Yes <br>
         </span>
-        <span id="naus">
-        <%= f.radio_button(:atmosphere, "No", value: false, class:"radio-btn", checked: ( @booking.atmosphere && @booking.atmosphere==false ) ? true : false ) %> NO <br>
-        </span>
-        <br>
-        <br>
 
+        <span id="naus">
+          <%= f.radio_button(:atmosphere, "No", value: false, class:"radio-btn", checked: ( @booking.atmosphere && @booking.atmosphere==false ) ? true : false ) %> NO <br>
+        </span>
+      </div>
+      <br>
+      <br>
+
+      <div class="test2">
         <label>Server Request: </label>
         <span id='yonce'>
-        <%= select_tag 'server_id', options_for_select(@servers.map{ |s| s.name }) %>
+          <%= select_tag 'server_id', options_for_select(@servers.map{ |s| s.name }) %>
         </span>
-        <br>
+      </div>
+      <br>
 
+      <div class="test2">
         <label>Server Deposit</label>
         <input id="sresults" type="text" value="" readonly>
-        <br>
+      </div>
+      <br>
 
-        <label>Total</label>
-        <span id="finale">
+      <div class="test2">
+        <span id ="finale">
+          <a href="#" id="refresh">Reservation Total</a>
         <input id="total" type="text" value="" readonly>
         </span>
-        <a href="#" id="refresh">Reservation Total</a>
-        <br>
+      </div>
+      <!--  -->
 
-        <%#= f.submit "Reserve Table" %>
+      <br>
+
+
       <% end %>
 
-      <script src="https://checkout.stripe.com/checkout.js" > </script>
-      <button id="stripetotal">Purchase Reservation</script>
+      <div>
+        <script src="https://checkout.stripe.com/checkout.js">
+        </script>
+        <button id="stripetotal">Purchase Reservation</script>
+       </div>
 
-
-  </div>
+     </div>
 
 
   <!-- end first section -->
@@ -341,29 +362,10 @@
         <% end %>
         <% end %>
 
-      </div>
-
-
-
-
-      <!-- this div closes vip_tables_andDJbooth_booking -->
-
-      <!-- </div> -->
-    </div>
 </div>
-
-    <!-- <div class="payment_section">
-
-    </div> -->
-
-    <!-- this div closes out floorplan -->
-    <!-- end second section -->
-
-    <!-- third section -->
-
-    <!-- end third section -->
-
-  </div><!--end top section-->
+</div>
+</div>
+</div>
 </div>
 
 <br>

@@ -7,16 +7,13 @@ body{
 
 .top_section{
 display: flex;
-
 }
 label {
   border-bottom: solid 1px rgb(83, 83, 83);
 }
 // ******* CLUB BOOKING INFO SECTION ************
 
-.booking_info{
-  margin-left: 15px;
-}
+
 
 .booking_info1, .booking_info2, .booking_info3, .booking_info4, .booking_info5{
   margin-left: 10px;
@@ -64,14 +61,24 @@ label {
 .club_floorplan{
   text-align: center;
 }
-
-.booking_info, .payment_section,{
-width: 355px;
+.booking_info{
+  width: 395px;
+  height:500px;
+  background-color: #212121;
+  border: solid 2px;
+  border-color: #34b4f4;
+  margin-top: 30px;
+  margin-left: 15px;
+  overflow: auto;
+}
+.payment_section,{
+width: 395px;
 height:500px;
 background-color: #212121;
 border: solid 2px;
 border-color: #34b4f4;
 margin-top: 30px;
+margin-left: 15px;
 }
 .club_floorplan{
 width: 477px;
@@ -277,15 +284,34 @@ margin-left: -65px;
   margin: 0 auto;
   overflow: auto;
 }
+#stripetotal {
+  background-color: transparent;
+  border-color: #34b4f4;
+  margin-left: 115px;
 
-.booking_info{
-  overflow: auto;
+
 }
-
 /* Override materialize for radio buttons */
 #wrapper input.radio-btn[type="radio"]:checked,
 #wrapper input.radio-btn[type="radio"]:not(:checked) {
   position: relative;
   opacity: 1;
   pointer-events: auto;
+}
+
+#nresults{
+  margin-top: -16px;
+}
+
+#sresults{
+  margin-top: -6px;
+}
+
+#finale {
+  margin-top: -10px !important;
+}
+
+#refresh{
+  position: relative;
+  top: 40px;
 }
