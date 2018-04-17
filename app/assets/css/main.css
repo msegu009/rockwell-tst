@@ -2054,7 +2054,7 @@ ul.icons {
   background-color: #ce1b28;
   color: rgba(255, 255, 255, 0.75);
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(/assets/cta01.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/cta01.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2815,19 +2815,34 @@ body.is-menu-visible #menu {
   visibility: visible; }
 
   #atmosphere{
-  background-image: url(./atmosphere.jpg);
+   background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(./atmosphere.jpg);
   color:white;
 }
 
 #reservation{
-background-image: url(./reservation.jpg);
+ background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(./reservation.jpg);
 background-size: cover;
+
 color:white;
+font-weight: bold;
 }
 
 #servers{
-  background-image: url(./servers.jpg);
+   background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(./servers.jpg);
 color:white;
+background-size: cover;
 }
 h3 {
   color:white;
@@ -2842,3 +2857,4 @@ ul.plain{
   display: flex;
   justify-content: space-around;
 }
+

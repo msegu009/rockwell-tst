@@ -12,6 +12,7 @@
 	</head>
 	<body class="is-preload">
 
+
 		<!-- Header -->
 			<header id="header">
 				<a class="logo" href="index.html">Rockwell</a>
@@ -54,10 +55,11 @@
 						<section>
 							<div class="content" id="servers">
 								<header>
-									 <%=link_to servers_path("Rockwell") do%> <i class="icon fa fa-fire"></i>
+									 <%= link_to servers_rockwell_path do %> <i class="icon fa fa-fire"></i>
+									 <% end %>
 									<h3> <br></br>Servers</h3>
 								</header>
-								<p>Rockwell has some of the most beautiful servers and bottle girls in all of Miami. Click here to check out their staff and links to their server's instagram accounts. Afterwards, when making your table reservations, you can select which server you would like for your table.</p>
+								<p >Rockwell has some of the most beautiful servers and bottle girls in all of Miami. Click here to check out their staff and links to their server's instagram accounts. Afterwards, when making your table reservations, you can select which server you would like for your table.</p>
 							</div>
 						</section>
 						<section>
@@ -79,7 +81,7 @@
 									<a href="" class="icon fa-paper-plane-o "><span class="label">Icon</span></a>
 									<h3>Atmosphere</h3>
 								</header>
-								<p>The "atmosphere" package is a built in element of the Velvet Rope that keeps the balance and ratio of our clients in line with the venues requirements. Depending on the number of people in your group, you may be required to purchase this service. However, there have been only rave reviews from having the beauty and personalites of this package added to your purchase!.</p>
+								<p class="custom-text">The "atmosphere" package is a built in element of the Velvet Rope that keeps the balance and ratio of our clients in line with the venues requirements. Depending on the number of people in your group, you may be required to purchase this service. However, there have been only rave reviews from having the beauty and personalites of this package added to your purchase!.</p>
 							</div>
 						</section>
 						<!-- <section> -->
@@ -93,7 +95,7 @@
 			<section id="cta" class="wrapper">
 				<div class="inner">
 					<h2>Why Rockwell You Might Ask?</h2>
-					<p>
+					<p class="custom-text">
 				Rockwell brings the perfect storm of LA cool, New York Music, and Miami energy to the space with this venture. Located on Washington Avenue, the concept pays hoage to Miami's rich history in nightlife, a rebirth of the space that formerly held the exclusive South Beach hotspons including Les Bains and Chaos..</p>
 				</div>
 			</section>
@@ -173,9 +175,9 @@
 
 		<!-- Scripts -->
 			<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+				  src="https://code.jquery.com/jquery-3.3.1.min.js"
+				  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+				  crossorigin="anonymous"></script>
 			<script src="/assets/browser.min.js"></script>
 			<script src="/assets/breakpoints.min.js"></script>
 			<script src="/assets/util.js"></script>
