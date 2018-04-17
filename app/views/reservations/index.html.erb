@@ -29,7 +29,9 @@
       </div>
     </div>
   </nav>
-
+  <div class="line"></div>
+  <%= image_tag "background2", :class => "fullscreen-bg" %>
+  <br>
 
 <div id="wrapper">
 <div class="top_section">
@@ -98,26 +100,17 @@
         <span id="finale">
         <input id="total" type="text" value="" readonly>
         </span>
-        <a href="#" id="refresh">Refresh Total</a>
+        <a href="#" id="refresh">Reservation Total</a>
         <br>
 
-        <%= f.submit "Reserve Table" %>
+        <%#= f.submit "Reserve Table" %>
       <% end %>
 
+      <script src="https://checkout.stripe.com/checkout.js" > </script>
+      <button id="stripetotal">Purchase Reservation</script>
 
 
 
-          <form action="your-server-side-code" method="POST">
-        <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_test_XcZDuXi6mofUZLtwZpiaSH3D"
-          data-amount="50000"
-          data-name="Velvet Rope"
-          data-description="Table charge"
-          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-          data-locale="payment_section">
-        </script>
-      </form>
   </div>
 
 
@@ -373,15 +366,10 @@
 
   </div><!--end top section-->
 </div>
-  <div class="bottom_section">
-    <p> Above you can see the exact table layout for Rockwell! Enter your desired reservation date on the left, and then click the "Check Table Availability" button to see which table are available. The available tables will turn green! Then select your table, enter your group information and server request to complete your table reservation! </p>
-  </div>
 
-  <div class="slider_of_rockwell_photos">
-    In this area there is going to be some kind of sliding group of photos of club scenes from rockwell just
-    to help decorate this page:
-  </div>
-  <div class="line"></div>
+<br>
+<br>
+    <div class="line"></div>
   <footer class="page-footer black">
     <div class="container">
       <div class="row">

@@ -90,7 +90,26 @@ $(document).ready(function(){
       atmosval = document.getElementById('aresults').value;
   });
   $("#refresh").on('click', function(w){
-      document.getElementById("total").value= parseInt(tablevalue) + parseInt(servervalue) + parseInt(atmosval);
-      w.preventDefault();
+    let calctotal = parseInt(tablevalue) + parseInt(servervalue) + parseInt(atmosval);
+    document.getElementById("total").value = calctotal;
+    document.getElementById("stripetotal").dataset.amount = calctotal
+    w.preventDefault();
+  })
+
+  $("#stripetotal").on("click", (event)=>{
+    let calctotal = parseInt(tablevalue) + parseInt(servervalue) + parseInt(atmosval);
+    StripeCheckout.configure({
+      key: "pk_test_XcZDuXi6mofUZLtwZpiaSH3D",
+      image: "https://stripe.com/img/documentation/checkout/marketplace.png",
+      locale: "payment_section"
+    })
+    console.log(calctotal);
+    StripeCheckout.open({
+      name: "Velvet Rope",
+      amount: calctotal*100,
+      description: "Table Charge",
+      key: "pk_test_XcZDuXi6mofUZLtwZpiaSH3D",
+      token: "tok_us"
+    })
   })
 });
