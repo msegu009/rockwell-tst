@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
 gem 'materialize-sass'
+gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'rails-erd'
 # Use Capistrano for deployment

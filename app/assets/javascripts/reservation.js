@@ -62,6 +62,7 @@ $(document).ready(function(){
         tablevalue = document.getElementById('results').value;
     });
     $("#yonce").on('change', function() {
+
         document.getElementById('sresults').value = parseInt(200);
         servervalue = document.getElementById('sresults').value;
   });
@@ -70,6 +71,7 @@ $(document).ready(function(){
   });
     $("#naus").on('change', function() {
         document.getElementById('aresults').value = parseInt(0);
+
   });
     $("#mels").on('change', function() {
       men = document.getElementById('nresults').value;

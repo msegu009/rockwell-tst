@@ -14,6 +14,7 @@
  *= require_self
  */
 @import "materialize";
+@import "font-awesome";
 
 .picker__date-display {
   background-color: grey;
@@ -119,3 +120,4 @@ select{
   border: solid 2px;
   border-color: #34b4f4;
 }
+
