@@ -80,7 +80,7 @@ rockwell_server_list= [
   ["Nancy", "rockwell_nancy", "nancyismia", 1],
   ["Tessa", "rockwell_tessa", "tess_valdera", 1],
   ["Vess", "rockwell_vee", "vee_lynn", 1],
-  ["Via","rockwell_via","via.koko_", 1]
+  ["Via","rockwell_viakoko","via.koko_", 1]
 ]
 
 Server.destroy_all
