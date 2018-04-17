@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
 
-
-  get '/rockwell/servers'
+  get '/servers/rockwell' => 'servers#rockwell'
+  get '/rockwell/servers' => 'rockwell#server'
 
   post '/bookings' => 'bookings#create'
 
