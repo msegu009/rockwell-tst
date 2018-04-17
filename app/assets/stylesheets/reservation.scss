@@ -281,3 +281,11 @@ margin-left: -65px;
 .booking_info{
   overflow: auto;
 }
+
+/* Override materialize for radio buttons */
+#wrapper input.radio-btn[type="radio"]:checked,
+#wrapper input.radio-btn[type="radio"]:not(:checked) {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}

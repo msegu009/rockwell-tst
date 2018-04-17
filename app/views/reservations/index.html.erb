@@ -24,7 +24,6 @@
         <label>Table Number: </label>
         <span id='chingy'>
         <%= select_tag 'table_id', options_for_select(@tables.map{ |t| [t.id, t.min_price] }, {:onchange=> "alert('Hello');"}) %>
-
         </span>
         <br>
 
@@ -32,17 +31,24 @@
         <input id="results" type="text" value="" readonly>
 
         <p>Group Info:</p>
-
-        <%= f.label :num_of_males, "Number of Males"%>:
-        <%= f.text_field :num_of_males%><br />
-
-        <%= f.label :num_of_females, "Number of Females" %>:
-        <%= f.text_field :num_of_females%><br />
+        <label>Number of Males :</label>
+        <span id="mels">
+        <input id="nresults" type="text" >
+        </span>
         <br>
 
+        <%= f.label :num_of_females, "Number of Females" %>:
+        <%= f.text_field :num_of_females %><br />
+        <br>
 
-        <label>Atmosphere Total</label>
-        <input type="text" value="" readonly>
+        <%= f.label :atmosphere %> :<br />
+        <input id="aresults" type="text" value="" readonly>
+        <span id="yaus">
+        <%= f.radio_button(:atmosphere, "Yes", value: true, class:"radio-btn", id:"radioyes", checked:( @booking.atmosphere && @booking.atmosphere == true ) ? true : false ) %> Yes <br>
+        </span>
+        <span id="naus">
+        <%= f.radio_button(:atmosphere, "No", value: false, class:"radio-btn", checked: ( @booking.atmosphere && @booking.atmosphere==false ) ? true : false ) %> NO <br>
+        </span>
         <br>
         <br>
 
@@ -54,19 +60,19 @@
 
         <label>Server Deposit</label>
         <input id="sresults" type="text" value="" readonly>
+        <br>
 
-        <%= f.label :expected_spend, "Total"%>:
-        <%= f.text_field :expected_spend%><br />
+        <label>Total</label>
+        <span id="finale">
+        <input id="total" type="text" value="" readonly>
+        </span>
+        <a href="#" id="refresh">Refresh Total</a>
+        <br>
 
         <%= f.submit "Reserve Table" %>
       <% end %>
-    <%#else %>
-      <%#= form_tag reservations_path, method: 'get' do %>
-        <%#= label_tag "Date"%>
-        <%#= date_field_tag :day %>
-        <%#= submit_tag "Check Table Availability" %>
-      <%# end %>
-    <% #end %>
+
+
           <form action="your-server-side-code" method="POST">
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
