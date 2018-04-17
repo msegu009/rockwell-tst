@@ -56,14 +56,19 @@ $(document).on("turbolinks:load ", function(){
 // <option value="Table 1">1</option>
 
 $(document).ready(function(){
+    var tableValue_,
+        servervalue = 200,
+        atmosval = 300;
     $("#chingy").on('change', function() {
       console.log("dis works?")
-        document.getElementById('results').value = $('#table_id').val();
-        tablevalue = document.getElementById('results').value;
+        tableValue_ = Number($('#table_id').val())
+        console.log(tableValue_);
+        document.getElementById('results').value = '$' + tableValue_;
+        tablevalue=document.getElementById('results').value;
     });
     $("#yonce").on('change', function() {
-        document.getElementById('sresults').value = parseInt(200);
-        servervalue = document.getElementById('sresults').value;
+        document.getElementById('sresults').value = '$' + parseInt(servervalue);
+
   });
     $("#yaus").on('change', function() {
         document.getElementById('aresults').value = parseInt(300);
@@ -74,45 +79,43 @@ $(document).ready(function(){
     $("#mels").on('change', function() {
       men = document.getElementById('nresults').value;
       if(men >= 3){
-        document.getElementById("aresults").value= 300;
+        document.getElementById("aresults").value= '$' + 300;
           $("#radioyes").prop("checked", true);
           $(":radio").click(function(e){
             e.preventDefault();
           })
       } else {
+        atmosval = 0;
         $(":radio").click(function(e){
           $(":radio").unbind('click').click();
 
         });
       }
-      atmosval = document.getElementById('aresults').value;
+
   });
   $("#refresh").on('click', function(w){
-    let calctotal = parseInt(tablevalue) + parseInt(servervalue) + parseInt(atmosval);
+    let calctotal = "$" + ( tableValue_ + servervalue + atmosval).toString();
     document.getElementById("total").value = calctotal;
-    document.getElementById("stripetotal").dataset.amount = calctotal
+    document.getElementById("stripetotal").dataset.amount = calctotal;
     w.preventDefault();
   })
 
   $("#stripetotal").on("click", (event)=>{
-    event.preventDefault();
-    let calctotal = parseInt(tablevalue) + parseInt(servervalue) + parseInt(atmosval);
+    let calctotal = Number(tableValue_) + Number(servervalue) + Number(atmosval);
+    console.log(tableValue_ + servervalue + atmosval, calctotal, 'calctotal')
+
     StripeCheckout.configure({
       key: "pk_test_XcZDuXi6mofUZLtwZpiaSH3D",
       image: "https://stripe.com/img/documentation/checkout/marketplace.png",
       locale: "payment_section"
     })
     console.log(calctotal);
-    let stripeValue = StripeCheckout.open({
+    StripeCheckout.open({
       name: "Velvet Rope",
-      amount: calctotal*100,
+      amount: calctotal * 100,
       description: "Table Charge",
       key: "pk_test_XcZDuXi6mofUZLtwZpiaSH3D",
-      token: "tok_ca",
-
+      token: "tok_us"
     })
-    console.log(stripeValue)
-
   })
 });
-
