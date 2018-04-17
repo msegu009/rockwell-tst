@@ -2022,7 +2022,7 @@ ul.icons {
     min-height: 30vh; }
   @media screen and (max-width: 1280px) {
     #banner video {
-      display: none; } }
+      z-index: 1; } }
   @media screen and (max-width: 736px) {
     #banner {
       height: auto !important;
@@ -2818,15 +2818,30 @@ body.is-menu-visible #menu {
   visibility: visible; }
 
   #atmosphere{
-  background-image: url(./rockwell_atmosphere.jpg);
+  background-image: url(./atmosphere.jpg);
   color:white;
 }
 
-#reservations{
-background-image: url(./reservations.jpg);
+#reservation{
+background-image: url(./reservation.jpg);
+background-size: cover;
+color:white;
 }
 
 #servers{
   background-image: url(./servers.jpg);
+color:white;
+}
+h3 {
+  color:white;
+  font-weight:bold;
 }
 
+#footer .content{
+  display: flex;
+  justify-content: space-around;
+}
+ul.plain{
+  display: flex;
+  justify-content: space-around;
+}

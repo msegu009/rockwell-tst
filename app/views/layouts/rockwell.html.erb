@@ -8,7 +8,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="/assets/main.css" />
-		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	</head>
 	<body class="is-preload">
 
@@ -23,7 +23,7 @@
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="./">Home</a></li>
+					<li><a href="/landing/index">Home</a></li>
 					<li><a href="#">Reservations</a></li>
 					<li><a href="/clubs/rockwell/servers">Servers</a></li>
 					<li><a href="#">Login</a></li>
@@ -39,6 +39,7 @@
 				<video autoplay loop muted playsinline>
 					<source src="/assets/banner.mp4" type="video/mp4">
 				</video>
+				
 			</section>
 
 		<!-- Highlights -->
@@ -46,20 +47,20 @@
 				<div class="inner">
 					<header class="special">
 						<h2>Miami's Return to the Super Lounge</h2>
-						<p>For those looking for the super club experience, without having to deal with their crowd and long lines, Rockwell is the ultimate in Miami lounge nightlife!.</p>
+						<p>For those looking for the ultimate club experience, without having to deal with their crowd and long lines, Rockwell is the ultimate in Miami lounge nightlife!</p>
 					</header>
 					<div class="highlights">
 						<section>
 							<div class="content" id="servers">
 								<header>
-									<a href="/clubs/rockwell/servers" class="icon fa fa-fire"><span class="label">Icon</span></a>
+									 <%=link_to servers_path("Rockwell") do%> <i class="icon fa fa-fire"></i>
 									<h3> <br></br>Servers</h3>
 								</header>
 								<p>Rockwell has some of the most beautiful servers and bottle girls in all of Miami. Click here to check out their staff and links to their server's instagram accounts. Afterwards, when making your table reservations, you can select which server you would like for your table.</p>
 							</div>
 						</section>
 						<section>
-							<div class="content" id="reservations">
+							<div class="content" id="reservation">
 
                                 <header>
                                 <%= link_to reservations_path("Rockwell") do %>
@@ -80,12 +81,12 @@
 								<p>The "atmosphere" package is a built in element of the Velvet Rope that keeps the balance and ratio of our clients in line with the venues requirements. Depending on the number of people in your group, you may be required to purchase this service. However, there have been only rave reviews from having the beauty and personalites of this package added to your purchase!.</p>
 							</div>
 						</section>
-						<section>
+						<!-- <section> -->
 
 
 					</div>
 				</div>
-			</section>
+<!-- 			</section> -->
 
 		<!-- CTA -->
 			<section id="cta" class="wrapper">
@@ -151,19 +152,16 @@
 			<footer id="footer">
 				<div class="inner">
 					<div class="content">
-						<iframe src="http://rockwellmiami.com/events/"
-						        width="100%" height="500" frameborder="0" sandbox>
-						  <p> <a href="http://rockwellmiami.com/events/">
-						  </a> </p>
-						</iframe>
 
-						<section>
-							<h4>Magna sed ipsum</h4>
+						<section >
+							<h4></h4>
+							<div class="networks">
 							<ul class="plain">
 								<li><a href="https://twitter.com/rockwellmiami"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
 								<li><a href="https://www.facebook.com/RockwellMiami"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
 								<li><a href="https://www.instagram.com/rockwellmiami/"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
 							</ul>
+							</div>
 						</section>
 					</div>
 					<div class="copyright">
@@ -173,7 +171,10 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="/assets/jquery.min.js" type= text/javascript></script>
+			<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 			<script src="/assets/browser.min.js" type= text/javascript></script>
 			<script src="/assets/breakpoints.min.js" type= text/javascript></script>
 			<script src="/assets/util.js" type= text/javascript></script>
