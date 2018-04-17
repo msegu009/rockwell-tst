@@ -30,6 +30,11 @@ class ReservationsController < ApplicationController
     render :json => @tables
   end
 
+  def checkout
+    p "<>"*32
+    p params
+  end
+
 
 
   private

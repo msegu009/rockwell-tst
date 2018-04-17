@@ -95,6 +95,7 @@ $(document).ready(function(){
   })
 
   $("#stripetotal").on("click", (event)=>{
+    event.preventDefault();
     let calctotal = parseInt(tablevalue) + parseInt(servervalue) + parseInt(atmosval);
     StripeCheckout.configure({
       key: "pk_test_XcZDuXi6mofUZLtwZpiaSH3D",
@@ -102,12 +103,16 @@ $(document).ready(function(){
       locale: "payment_section"
     })
     console.log(calctotal);
-    StripeCheckout.open({
+    let stripeValue = StripeCheckout.open({
       name: "Velvet Rope",
       amount: calctotal*100,
       description: "Table Charge",
       key: "pk_test_XcZDuXi6mofUZLtwZpiaSH3D",
-      token: "tok_us"
+      token: "tok_ca",
+
     })
+    console.log(stripeValue)
+
   })
 });
+

@@ -127,9 +127,11 @@
       <% end %>
 
       <div>
-        <script src="https://checkout.stripe.com/checkout.js">
-        </script>
-        <button id="stripetotal">Purchase Reservation</script>
+        <%= form_tag method: :post do %>
+          <script src="https://checkout.stripe.com/checkout.js"></script>
+          <button id="stripetotal" type="submit">Purchase Reservation</button>
+        <% end %>
+
        </div>
 
      </div>
