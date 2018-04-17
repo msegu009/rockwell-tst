@@ -25,7 +25,7 @@ $(document).on("turbolinks:load ", function(){
       console.log(data);
       let options = ""
       data.forEach( (opt) => {
-        options += `<option value="${opt.name}">${opt.id}</option>`
+        options += `<option value="${opt.min_price}">${opt.id}</option>`
       })
       $("#table_id").html(options);
 
@@ -57,12 +57,40 @@ $(document).on("turbolinks:load ", function(){
 
 $(document).ready(function(){
     $("#chingy").on('change', function() {
+      console.log("dis works?")
         document.getElementById('results').value = $('#table_id').val();
+        tablevalue = document.getElementById('results').value;
     });
-});
-
-$(document).ready(function(){
     $("#yonce").on('change', function() {
-        document.getElementById('sresults').value = parseInt(300);
+
+        document.getElementById('sresults').value = parseInt(200);
+        servervalue = document.getElementById('sresults').value;
   });
+    $("#yaus").on('change', function() {
+        document.getElementById('aresults').value = parseInt(300);
+  });
+    $("#naus").on('change', function() {
+        document.getElementById('aresults').value = parseInt(0);
+
+  });
+    $("#mels").on('change', function() {
+      men = document.getElementById('nresults').value;
+      if(men >= 3){
+        document.getElementById("aresults").value= 300;
+          $("#radioyes").prop("checked", true);
+          $(":radio").click(function(e){
+            e.preventDefault();
+          })
+      } else {
+        $(":radio").click(function(e){
+          $(":radio").unbind('click').click();
+
+        });
+      }
+      atmosval = document.getElementById('aresults').value;
+  });
+  $("#refresh").on('click', function(w){
+      document.getElementById("total").value= parseInt(tablevalue) + parseInt(servervalue) + parseInt(atmosval);
+      w.preventDefault();
+  })
 });
